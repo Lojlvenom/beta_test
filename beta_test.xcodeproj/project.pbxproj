@@ -18,6 +18,10 @@
 		065FADFB2C7BC6D600CC81D6 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FADFA2C7BC6D600CC81D6 /* RepoCell.swift */; };
 		065FADFD2C7BE21500CC81D6 /* ViewRepoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FADFC2C7BE21500CC81D6 /* ViewRepoController.swift */; };
 		065FADFF2C7BE4F800CC81D6 /* RepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FADFE2C7BE4F800CC81D6 /* RepoViewModel.swift */; };
+		065FAE022C7BF98C00CC81D6 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FAE012C7BF98C00CC81D6 /* HTTP.swift */; };
+		065FAE042C7BFA4C00CC81D6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FAE032C7BFA4C00CC81D6 /* Endpoint.swift */; };
+		065FAE062C7C06BA00CC81D6 /* RepoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FAE052C7C06BA00CC81D6 /* RepoService.swift */; };
+		065FAE082C7C0CEE00CC81D6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FAE072C7C0CEE00CC81D6 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		065FADFA2C7BC6D600CC81D6 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		065FADFC2C7BE21500CC81D6 /* ViewRepoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepoController.swift; sourceTree = "<group>"; };
 		065FADFE2C7BE4F800CC81D6 /* RepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewModel.swift; sourceTree = "<group>"; };
+		065FAE012C7BF98C00CC81D6 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		065FAE032C7BFA4C00CC81D6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		065FAE052C7C06BA00CC81D6 /* RepoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoService.swift; sourceTree = "<group>"; };
+		065FAE072C7C0CEE00CC81D6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,9 @@
 		065FADF02C7BC07100CC81D6 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				065FAE012C7BF98C00CC81D6 /* HTTP.swift */,
+				065FAE032C7BFA4C00CC81D6 /* Endpoint.swift */,
+				065FAE052C7C06BA00CC81D6 /* RepoService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -126,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				065FADFE2C7BE4F800CC81D6 /* RepoViewModel.swift */,
+				065FAE072C7C0CEE00CC81D6 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -203,11 +215,15 @@
 				065FADFD2C7BE21500CC81D6 /* ViewRepoController.swift in Sources */,
 				065FADF72C7BC15100CC81D6 /* Constants.swift in Sources */,
 				065FADFB2C7BC6D600CC81D6 /* RepoCell.swift in Sources */,
+				065FAE062C7C06BA00CC81D6 /* RepoService.swift in Sources */,
 				065FADFF2C7BE4F800CC81D6 /* RepoViewModel.swift in Sources */,
 				065FADDE2C7BBEE800CC81D6 /* HomeViewController.swift in Sources */,
+				065FAE022C7BF98C00CC81D6 /* HTTP.swift in Sources */,
 				065FADE42C7BBEE800CC81D6 /* beta_test.xcdatamodeld in Sources */,
+				065FAE082C7C0CEE00CC81D6 /* HomeViewModel.swift in Sources */,
 				065FADF92C7BC22100CC81D6 /* Repo.swift in Sources */,
 				065FADDA2C7BBEE800CC81D6 /* AppDelegate.swift in Sources */,
+				065FAE042C7BFA4C00CC81D6 /* Endpoint.swift in Sources */,
 				065FADDC2C7BBEE800CC81D6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

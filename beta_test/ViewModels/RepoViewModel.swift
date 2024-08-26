@@ -27,7 +27,7 @@ class RepoViewModel {
     
     
     var starCountLabel: Int {
-        return self.repo.stargazers_count
+        return self.repo.stargazersCount
     }
     
     

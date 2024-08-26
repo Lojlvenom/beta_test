@@ -8,8 +8,6 @@
 import Foundation
 
 struct Constants {
-    static let base_url = "https://api.github.com‬‭/"
-    static let repos_completion = "search/repositories?q=language:Swift&sort=stars"
-    
-    
+    static let scheme = "https"
+    static let baseUrl = "https://api.github.com‬‭/"
 }

@@ -7,14 +7,25 @@
 
 import Foundation
 
-struct Repo {
+struct RepoArray: Decodable {
+    let items: [Repo]
+}
+
+struct Repo: Decodable {
     let id: Int
     let name: String
     let description: String
     
     // MARK: Implement coding keys to mantain code sanity
-    let stargazers_count: Int
-
+    let stargazersCount: Int
+    
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case name = "name"
+        case description = "description"
+        case stargazersCount = "stargazers_count"
+    }
     
 }
 
@@ -22,9 +33,9 @@ struct Repo {
 extension Repo {
     public static func getMockRepos() -> [Repo]{
         return [
-            Repo(id: 1, name: "foo bar", description: "foo bar repository", stargazers_count: 200),
-            Repo(id: 1, name: "foo bar 2", description: "foo bar 2 repository", stargazers_count: 2),
-            Repo(id: 1, name: "foo bar 3", description: "foo bar 3 repository", stargazers_count: 45)
+            Repo(id: 1, name: "foo bar", description: "foo bar repository", stargazersCount: 200),
+            Repo(id: 1, name: "foo bar 2", description: "foo bar 2 repository", stargazersCount: 2),
+            Repo(id: 1, name: "foo bar 3", description: "foo bar 3 repository", stargazersCount: 45)
         ]
     }
 }
