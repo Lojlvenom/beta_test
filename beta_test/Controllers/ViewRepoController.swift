@@ -16,7 +16,6 @@ class ViewRepoController: UIViewController {
         return view
     }()
     
-    
     private let descriptionLabel: UILabel = {
         let label = UILabel()
         label.textColor = .label
@@ -44,8 +43,15 @@ class ViewRepoController: UIViewController {
         return label
     }()
     
+    private let saveButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Save", for: .normal)
+        button.addTarget(self, action: #selector(toggleSave), for: .touchUpInside)
+        return button
+    }()
+    
     private lazy var vStack: UIStackView = {
-        let vStack = UIStackView(arrangedSubviews: [descriptionLabel, starCountLabel, pullsLabel])
+        let vStack = UIStackView(arrangedSubviews: [descriptionLabel, starCountLabel, pullsLabel, saveButton])
         vStack.axis = .vertical
         vStack.spacing = 12
         vStack.distribution = .fill
@@ -65,11 +71,11 @@ class ViewRepoController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
@@ -89,16 +95,23 @@ class ViewRepoController: UIViewController {
             DispatchQueue.main.async {
                 if self.viewModel.pullRequests.count == 0 {
                     self.pullsLabel.text = "No Pull requests"
-                } else
-                {
+                } else {
                     self.pullsLabel.text = "Open Pull requests"
                 }
-                    
+                
                 self.tableView.reloadData()
             }
         }
+        
+        self.viewModel.onSaveStateChanged = {
+            DispatchQueue.main.async {
+                self.updateSaveButtonTitle()
+            }
+        }
+        
+        updateSaveButtonTitle()
     }
-    
+
     // MARK: - UI Setup
     private func setupUI() {
         self.view.addSubview(scrollView)
@@ -136,6 +149,22 @@ class ViewRepoController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             tableView.heightAnchor.constraint(equalToConstant: 400)
         ])
+    }
+    
+    @objc private func toggleSave() {
+        if viewModel.isRepoSaved() {
+            viewModel.removeFromCoreData()
+        } else {
+            viewModel.saveToCoreData()
+        }
+    }
+    
+    private func updateSaveButtonTitle() {
+        if viewModel.isRepoSaved() {
+            saveButton.setTitle("Remove", for: .normal)
+        } else {
+            saveButton.setTitle("Save", for: .normal)
+        }
     }
 }
 

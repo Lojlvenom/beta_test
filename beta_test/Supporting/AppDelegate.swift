@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  beta_test
-//
-//  Created by Joao Camilo on 25/08/24.
-//
-
 import UIKit
 import CoreData
 

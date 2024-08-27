@@ -1,10 +1,3 @@
-//
-//  RepoService.swift
-//  beta_test
-//
-//  Created by Joao Camilo on 25/08/24.
-//
-
 import Foundation
 
 enum RepoServiceError: Error {
@@ -18,7 +11,7 @@ class RepoService {
     static func fetchRepos(with endpoint: Endpoint, completion: @escaping (Result<[Repo], RepoServiceError>) -> Void) {
         
         guard let request = endpoint.request else { return }
-        print(request)
+        
         URLSession.shared.dataTask(with: request) { data, resp, error in
             
             if let error  = error {
@@ -67,10 +60,3 @@ class RepoService {
     
     
 }
-
-//http://api.github.com/repos/{owner}/{repository}/pulls
-//
-//https://api.github.com/repos/vsouza/awesome-ios/pulls
-//
-//https://api.github.com/repos/Alamofire/Alamofire/pulls
-//https://github.com/Alamofire/Alamofire

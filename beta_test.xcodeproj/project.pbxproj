@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060985592C7C8C3F00EBDFAD /* SavedRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060985582C7C8C3F00EBDFAD /* SavedRepoCell.swift */; };
 		065FADDA2C7BBEE800CC81D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FADD92C7BBEE800CC81D6 /* AppDelegate.swift */; };
 		065FADDC2C7BBEE800CC81D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FADDB2C7BBEE800CC81D6 /* SceneDelegate.swift */; };
 		065FADDE2C7BBEE800CC81D6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FADDD2C7BBEE800CC81D6 /* HomeViewController.swift */; };
@@ -22,9 +23,12 @@
 		065FAE042C7BFA4C00CC81D6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FAE032C7BFA4C00CC81D6 /* Endpoint.swift */; };
 		065FAE062C7C06BA00CC81D6 /* RepoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FAE052C7C06BA00CC81D6 /* RepoService.swift */; };
 		065FAE082C7C0CEE00CC81D6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FAE072C7C0CEE00CC81D6 /* HomeViewModel.swift */; };
+		065FAE0A2C7C861600CC81D6 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FAE092C7C861600CC81D6 /* SavedViewController.swift */; };
+		065FAE0C2C7C86A500CC81D6 /* SavedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FAE0B2C7C86A500CC81D6 /* SavedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		060985582C7C8C3F00EBDFAD /* SavedRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRepoCell.swift; sourceTree = "<group>"; };
 		065FADD62C7BBEE800CC81D6 /* beta_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beta_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		065FADD92C7BBEE800CC81D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		065FADDB2C7BBEE800CC81D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +46,8 @@
 		065FAE032C7BFA4C00CC81D6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		065FAE052C7C06BA00CC81D6 /* RepoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoService.swift; sourceTree = "<group>"; };
 		065FAE072C7C0CEE00CC81D6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		065FAE092C7C861600CC81D6 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
+		065FAE0B2C7C86A500CC81D6 /* SavedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				065FADFA2C7BC6D600CC81D6 /* RepoCell.swift */,
+				060985582C7C8C3F00EBDFAD /* SavedRepoCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +124,7 @@
 			children = (
 				065FADDD2C7BBEE800CC81D6 /* HomeViewController.swift */,
 				065FADFC2C7BE21500CC81D6 /* ViewRepoController.swift */,
+				065FAE092C7C861600CC81D6 /* SavedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -138,6 +146,7 @@
 			children = (
 				065FADFE2C7BE4F800CC81D6 /* RepoViewModel.swift */,
 				065FAE072C7C0CEE00CC81D6 /* HomeViewModel.swift */,
+				065FAE0B2C7C86A500CC81D6 /* SavedViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -213,10 +222,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				065FADFD2C7BE21500CC81D6 /* ViewRepoController.swift in Sources */,
+				065FAE0C2C7C86A500CC81D6 /* SavedViewModel.swift in Sources */,
 				065FADF72C7BC15100CC81D6 /* Constants.swift in Sources */,
+				065FAE0A2C7C861600CC81D6 /* SavedViewController.swift in Sources */,
 				065FADFB2C7BC6D600CC81D6 /* RepoCell.swift in Sources */,
 				065FAE062C7C06BA00CC81D6 /* RepoService.swift in Sources */,
 				065FADFF2C7BE4F800CC81D6 /* RepoViewModel.swift in Sources */,
+				060985592C7C8C3F00EBDFAD /* SavedRepoCell.swift in Sources */,
 				065FADDE2C7BBEE800CC81D6 /* HomeViewController.swift in Sources */,
 				065FAE022C7BF98C00CC81D6 /* HTTP.swift in Sources */,
 				065FADE42C7BBEE800CC81D6 /* beta_test.xcdatamodeld in Sources */,
